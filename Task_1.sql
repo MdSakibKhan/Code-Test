@@ -1,11 +1,13 @@
 
 
+1.
 
 select courses.name as Courses_Name, teachers.name as Teachers_Name from courses inner join teachers on courses.id = teachers.id;
 
 
 
 
+2.
 
 select courses.teacher_id, teachers.name, count(courses.teacher_id) as Occurancevalue 
 from courses 
@@ -16,5 +18,6 @@ order by Occurancevalue desc limit 1;
 
 
 
+3.
 
 select name,id from teachers where id not in (select teacher_id as id from courses);
