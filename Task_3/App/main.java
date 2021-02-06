@@ -1,9 +1,7 @@
 package App;
 
-import model.ClassPlan;
-import model.subject;
-import model.teacher;
-import repository.Store;
+import model.*;
+import repository.*;
 import services.*;
 
 public class main {
