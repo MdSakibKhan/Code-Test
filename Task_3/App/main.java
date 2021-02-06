@@ -6,12 +6,8 @@ import model.teacher;
 import repository.Store;
 import services.*;
 
-import java.util.ArrayList;
-import java.util.Scanner;
-
 public class main {
     public static void main(String[]args){
-        Scanner scan = new Scanner(System.in);
 
         CreateStore create = new CreateStore();
         create.createStore();
