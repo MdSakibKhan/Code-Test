@@ -25,25 +25,34 @@ public class main {
 
         boolean run = true;
 
-        while(run) {
-            promt.print();
+        promt.print();
 
-            char input = in.takeChar();
-
+        while(run){
+            char input;
+            try {
+                input = in.takeChar();
+            }catch (Exception e){
+                System.out.println("Wrong Input Type!!!, Follow Intruction.");
+                continue;
+            }
             if (input == 'A') {
                 a.task(in, MainStore);
+                promt.print();
             }
 
-            if(input =='B') {
+            else if(input =='B') {
                 b.task(MainStore);
                 run = false;
             }
 
-            if (input== 'C') {
+            else if (input== 'C') {
                 c.task(MainStore);
                 run = false;
             }
-
+            else{
+                System.out.println("Wrong Input!!!, Follow Intruction.");
+                promt.print();
+            }
         }
     }
 }
