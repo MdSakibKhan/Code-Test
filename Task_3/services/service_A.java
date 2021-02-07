@@ -11,21 +11,24 @@ public class service_A {
         }
 
         System.out.println("Insert dayIndex(0 - 4) hourIndex(0 - 3) courseIndex");
-        int dayIndex = in.takeInt();
+        try {
+            int dayIndex = in.takeInt();
+            while(dayIndex<0 || dayIndex>4) {
+                System.out.println("Out Of Range, Please Enter dayIndex(0 - 4)");
+                dayIndex = in.takeInt();
+            }
+            int hourIndex = in.takeInt();
+            while(hourIndex<0 || hourIndex>3) {
+                System.out.println("Out Of Range, Please Enter hourIndex(0 - 3)");
+                hourIndex = in.takeInt();
+            }
+            int courseIndex = in.takeInt();
 
-        while(dayIndex<0 || dayIndex>4) {
-            System.out.println("Out Of Range, Please Enter dayIndex(0 - 4)");
-            dayIndex = in.takeInt();
+            mainStore.getClassPlan_items().add(new ClassPlan(dayIndex, hourIndex, mainStore.getAll_subjects().get(courseIndex).getName()));
+
+            in.next();
+        }catch (Exception e){
+            System.out.println("Input Type Mismatched, Please Try Again with proper Input Type");
         }
-        int hourIndex = in.takeInt();
-        while(hourIndex<0 || hourIndex>3) {
-            System.out.println("Out Of Range, Please Enter hourIndex(0 - 3)");
-            hourIndex = in.takeInt();
-        }
-        int courseIndex = in.takeInt();
-
-        mainStore.getClassPlan_items().add(new ClassPlan(dayIndex, hourIndex, mainStore.getAll_subjects().get(courseIndex).getName()));
-
-        in.next();
     }
 }
