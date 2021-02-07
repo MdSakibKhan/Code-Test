@@ -20,8 +20,8 @@ public class main {
         repository.createStore();
         Store MainStore = repository.getStore();
 
-        addSub.add_subjects(MainStore,"English Grammar","Mathematics","Physics","Chemistry","Biology");
-        addTeacher.add_Teachers(MainStore,"John Smith","Lara Gilbert","Johanna Kabir","Danniel Robertson","Larry Cooper");
+        addSub.add_subjects(MainStore, new String[]{"English Grammar", "Mathematics", "Physics", "Chemistry", "Biology"});
+        addTeacher.add_Teachers(MainStore, new String[]{"John Smith", "Lara Gilbert", "Johanna Kabir", "Danniel Robertson", "Larry Cooper"});
 
         boolean run = true;
 
