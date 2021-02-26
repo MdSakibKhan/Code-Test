@@ -1,4 +1,4 @@
-# Penguin Code-Test
+# P Code-Test
 
 1. Task_1 - SQL solved using MySQL
 2. Task_2 - Problem Solving done using Python
